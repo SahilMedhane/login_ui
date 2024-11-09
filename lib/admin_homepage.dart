@@ -21,7 +21,7 @@ class _AdminHomepageState extends State {
       //scaffold background color
       backgroundColor: Colors.white,
       appBar: AppBar(
-        //flexibleSpace: decorat,
+        //flexibleSpace: decoration
         backgroundColor: const Color.fromARGB(255, 155, 123, 206),
         title: const Text(
           "Hello Alex!!",

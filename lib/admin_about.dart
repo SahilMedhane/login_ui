@@ -5,13 +5,13 @@ class AdminAbout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(34, 40, 49, 1),
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(34, 40, 49, 1),
+        backgroundColor: Colors.white,
         title: const Text(
           "About",
           style: TextStyle(
-              fontSize: 25, fontWeight: FontWeight.w500, color: Colors.white),
+              fontSize: 25, fontWeight: FontWeight.w500, color: Colors.black),
         ),
         centerTitle: true,
         leading: GestureDetector(
@@ -20,7 +20,7 @@ class AdminAbout extends StatelessWidget {
           },
           child: const Icon(
             Icons.arrow_back,
-            color: Colors.white,
+            color: Colors.black,
             size: 30,
           ),
         ),
@@ -36,7 +36,7 @@ class AdminAbout extends StatelessWidget {
               style: TextStyle(
                   fontSize: 40,
                   fontWeight: FontWeight.w500,
-                  color: Colors.white),
+                  color: Colors.black),
             ),
             const SizedBox(
               height: 10,
@@ -46,7 +46,7 @@ class AdminAbout extends StatelessWidget {
               style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w400,
-                  color: Colors.white),
+                  color: Colors.black),
             ),
             const SizedBox(
               height: 10,
@@ -56,7 +56,7 @@ class AdminAbout extends StatelessWidget {
               style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w400,
-                  color: Colors.white),
+                  color: Colors.black),
             ),
             const SizedBox(
               height: 20,
@@ -66,7 +66,7 @@ class AdminAbout extends StatelessWidget {
               style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w400,
-                  color: Colors.white),
+                  color: Colors.black),
             ),
             const Spacer(),
             Container(
@@ -76,7 +76,7 @@ class AdminAbout extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(50),
                 shape: BoxShape.rectangle,
-                color: const Color.fromRGBO(57, 62, 70, 1),
+                color: const Color(0xFF1E3A8A),
               ),
               child: const Text(
                 "Terms and Conditions",
@@ -96,7 +96,7 @@ class AdminAbout extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(50),
                 shape: BoxShape.rectangle,
-                color: const Color.fromRGBO(57, 62, 70, 1),
+                color: const Color(0xFF1E3A8A),
               ),
               child: const Text(
                 "Open Source Licences",

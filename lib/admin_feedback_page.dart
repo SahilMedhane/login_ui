@@ -5,13 +5,13 @@ class AdminFeedbackPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(34, 40, 49, 1),
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(34, 40, 49, 1),
+        backgroundColor: Colors.white,
         title: const Text(
           "Feedback",
           style: TextStyle(
-              fontSize: 25, fontWeight: FontWeight.w500, color: Colors.white),
+              fontSize: 25, fontWeight: FontWeight.w500, color: Colors.black),
         ),
         centerTitle: true,
         leading: GestureDetector(
@@ -20,15 +20,18 @@ class AdminFeedbackPage extends StatelessWidget {
           },
           child: const Icon(
             Icons.arrow_back,
-            color: Colors.white,
+            color: Colors.black,
             size: 30,
           ),
         ),
       ),
-      body: const Text(
-        "Give us feedback at this link",
-        style: TextStyle(
-            fontSize: 15, fontWeight: FontWeight.w400, color: Colors.white),
+      body: Padding(
+        padding: const EdgeInsets.all(18.0),
+        child: const Text(
+          "Give us feedback at this link",
+          style: TextStyle(
+              fontSize: 15, fontWeight: FontWeight.w400, color: Colors.black),
+        ),
       ),
     );
   }

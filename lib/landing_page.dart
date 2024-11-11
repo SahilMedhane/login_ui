@@ -12,8 +12,8 @@ class _LandingPageState extends State {
   Widget build(context) {
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.all(20),
-        color: const Color.fromRGBO(57, 62, 70, 1),
+        padding: const EdgeInsets.all(40),
+        color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,7 +30,7 @@ class _LandingPageState extends State {
                   style: TextStyle(
                     fontSize: 50,
                     fontWeight: FontWeight.bold,
-                    color: Colors.grey,
+                    color: const Color(0xFF1E3A8A),
                     height: 1.4, // Reduces gap between lines
                   ),
                 ),
@@ -39,7 +39,7 @@ class _LandingPageState extends State {
                   style: TextStyle(
                     fontSize: 50,
                     fontWeight: FontWeight.bold,
-                    color: Colors.grey,
+                    color: const Color(0xFF1E3A8A),
                     height: 1,
                   ),
                 ),
@@ -48,7 +48,7 @@ class _LandingPageState extends State {
                   style: TextStyle(
                     fontSize: 50,
                     fontWeight: FontWeight.bold,
-                    color: Colors.grey,
+                    color: const Color(0xFF1E3A8A),
                     height: 1.3,
                   ),
                 ),
@@ -57,7 +57,7 @@ class _LandingPageState extends State {
                   style: TextStyle(
                     fontSize: 50,
                     fontWeight: FontWeight.bold,
-                    color: Colors.grey,
+                    color: const Color(0xFF1E3A8A),
                     height: 1,
                   ),
                 ),
@@ -78,12 +78,24 @@ class _LandingPageState extends State {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                   decoration: BoxDecoration(
-                    color: Color.fromRGBO(254, 211, 106, 1),
+                    gradient: const LinearGradient(
+                      colors: [
+                        const Color.fromARGB(130, 112, 114, 235),
+                        const Color.fromARGB(123, 155, 39, 176),
+                        const Color.fromARGB(127, 155, 39, 176),
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    //color: Color.fromRGBO(254, 211, 106, 1),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: const Text(
                     "Let's Start",
-                    style: TextStyle(fontSize: 32, color: Colors.black),
+                    style: TextStyle(
+                        fontSize: 32,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ),

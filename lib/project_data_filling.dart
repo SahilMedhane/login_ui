@@ -14,7 +14,7 @@ class _DataFillingState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(34, 40, 49, 1),
+      backgroundColor: Colors.white,
 
       /// CREATE NEW PROJECT
 
@@ -30,15 +30,15 @@ class _DataFillingState extends State {
           },
           child: Icon(
             Icons.arrow_back,
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
         title: const Text(
           "Create New Project",
-          style: TextStyle(fontSize: 25, color: Colors.white),
+          style: TextStyle(fontSize: 25, color: Colors.black),
         ),
         centerTitle: true,
-        backgroundColor: const Color.fromRGBO(34, 40, 49, 1),
+        backgroundColor: Colors.white,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -50,7 +50,7 @@ class _DataFillingState extends State {
           children: [
             const Text(
               "Project Title",
-              style: TextStyle(fontSize: 25, color: Colors.white),
+              style: TextStyle(fontSize: 25, color: Colors.black),
             ),
 
             Padding(
@@ -58,19 +58,19 @@ class _DataFillingState extends State {
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: const Color.fromRGBO(57, 62, 70, 1)),
+                    color: Colors.indigo),
 
                 /// TITLE TEXT FIELD
 
                 child: TextField(
                   style: const TextStyle(
                     //backgroundColor: Color.fromRGBO(57, 62, 70, 1),
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                   decoration: InputDecoration(
                     hintText: "Enter Title ...",
-                    hintStyle: const TextStyle(color: Colors.grey),
-                    fillColor: Colors.grey,
+                    hintStyle: const TextStyle(color: Colors.white),
+                    fillColor: Colors.white,
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
                         borderSide: const BorderSide(color: Colors.black)),
@@ -87,7 +87,7 @@ class _DataFillingState extends State {
 
             const Text(
               "Project Description",
-              style: TextStyle(fontSize: 25, color: Colors.white),
+              style: TextStyle(fontSize: 25, color: Colors.black),
             ),
 
             Padding(
@@ -97,18 +97,18 @@ class _DataFillingState extends State {
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey),
                     borderRadius: BorderRadius.circular(20),
-                    color: const Color.fromRGBO(57, 62, 70, 1)),
+                    color: Colors.indigo),
 
                 /// DESCRIPTION TEXT FIELD
 
                 child: TextField(
                   //selectionHeightStyle: BoxHeightStyle.max,
-                  style: const TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.black),
                   decoration: InputDecoration(
                     hintText: "Enter Description ...",
 
                     hintStyle: const TextStyle(
-                      color: Colors.grey,
+                      color: Colors.white,
                     ),
                     //fillColor: Colors.grey,
                     focusColor: const Color.fromRGBO(57, 62, 70, 1),
@@ -128,7 +128,7 @@ class _DataFillingState extends State {
 
             const Text(
               "Time & Date",
-              style: TextStyle(fontSize: 25, color: Colors.white),
+              style: TextStyle(fontSize: 25, color: Colors.black),
             ),
 
             const SizedBox(
@@ -140,15 +140,28 @@ class _DataFillingState extends State {
                 Container(
                   height: 40,
                   width: 178,
-                  color: const Color.fromRGBO(57, 62, 70, 1),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Color.fromARGB(130, 112, 114, 235),
+                        const Color.fromARGB(123, 155, 39, 176),
+                        const Color.fromARGB(127, 155, 39, 176),
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                  ),
                   child: Row(
                     children: [
                       /// TIME
                       Container(
                           height: 40,
                           width: 40,
-                          color: Colors.cyanAccent,
-                          child: const Icon(Icons.access_time_rounded)),
+                          color: const Color(0xFF1E3A8A),
+                          child: const Icon(
+                            Icons.access_time_rounded,
+                            color: Colors.white,
+                          )),
 
                       const SizedBox(
                         width: 50,
@@ -161,7 +174,7 @@ class _DataFillingState extends State {
                             "10:30",
                             style: TextStyle(
                                 //fontSize: 25,
-                                color: Colors.white),
+                                color: Colors.black),
                           ),
                         ],
                       ),
@@ -174,7 +187,17 @@ class _DataFillingState extends State {
                 Container(
                   height: 40,
                   width: 178,
-                  color: const Color.fromRGBO(57, 62, 70, 1),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Color.fromARGB(130, 112, 114, 235),
+                        const Color.fromARGB(123, 155, 39, 176),
+                        const Color.fromARGB(127, 155, 39, 176),
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                  ),
                   child: Row(
                     children: [
                       /// DATE
@@ -182,8 +205,11 @@ class _DataFillingState extends State {
                       Container(
                           height: 40,
                           width: 40,
-                          color: Colors.cyanAccent,
-                          child: const Icon(Icons.calendar_month_outlined)),
+                          color: const Color(0xFF1E3A8A),
+                          child: const Icon(
+                            Icons.calendar_month_outlined,
+                            color: Colors.white,
+                          )),
 
                       const SizedBox(
                         width: 30,
@@ -196,7 +222,7 @@ class _DataFillingState extends State {
                             "29/10/2024",
                             style: TextStyle(
                                 //fontSize: 25,
-                                color: Colors.white),
+                                color: Colors.black),
                           ),
                         ],
                       ),
@@ -207,7 +233,7 @@ class _DataFillingState extends State {
             ),
 
             const SizedBox(
-              height: 220,
+              height: 200,
             ),
 
             /// SUBMIT
@@ -230,12 +256,12 @@ class _DataFillingState extends State {
                     width: 170,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: Colors.cyanAccent,
+                      color: const Color(0xFF1E3A8A),
                     ),
                     child: const Center(
                         child: Text(
                       "Submit",
-                      style: TextStyle(fontSize: 25, color: Colors.black),
+                      style: TextStyle(fontSize: 25, color: Colors.white),
                     )),
                   ),
                 ),

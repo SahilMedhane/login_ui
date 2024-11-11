@@ -21,8 +21,19 @@ class _AdminHomepageState extends State {
       //scaffold background color
       backgroundColor: Colors.white,
       appBar: AppBar(
-        //flexibleSpace: decoration
-        backgroundColor: const Color.fromARGB(255, 155, 123, 206),
+        /*flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color.fromARGB(255, 112, 114, 235),
+                const Color.fromARGB(175, 155, 39, 176),
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
+        ),*/
+        backgroundColor: Colors.white,
         title: const Text(
           "Hello Alex!!",
           style: TextStyle(
@@ -46,7 +57,7 @@ class _AdminHomepageState extends State {
       //Drawer
       drawer: Drawer(
         width: 300,
-        backgroundColor: const Color.fromRGBO(34, 40, 49, 1),
+        backgroundColor: Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Column(
@@ -61,7 +72,7 @@ class _AdminHomepageState extends State {
                     height: 50,
                     width: 50,
                     decoration: const BoxDecoration(
-                      color: Color.fromRGBO(57, 62, 70, 1),
+                      color: const Color(0xFF1E3A8A),
                       shape: BoxShape.circle,
                     ),
                     child: const Icon(
@@ -78,7 +89,7 @@ class _AdminHomepageState extends State {
                     style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.w400,
-                        color: Colors.white),
+                        color: Colors.black),
                   ),
                 ],
               ),
@@ -96,16 +107,26 @@ class _AdminHomepageState extends State {
                 child: Container(
                   alignment: Alignment.center,
                   width: 300,
+                  height: 40,
                   decoration: BoxDecoration(
-                    color: const Color.fromRGBO(57, 62, 70, 1),
+                    gradient: const LinearGradient(
+                      colors: [
+                        Color.fromARGB(130, 112, 114, 235),
+                        Color.fromARGB(123, 155, 39, 176),
+                        Color.fromARGB(127, 155, 39, 176),
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    //color: const Color(0xFF1E3A8A),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: const Text(
                     "DashBoard",
                     style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
                   ),
                 ),
               ),
@@ -123,16 +144,26 @@ class _AdminHomepageState extends State {
                 child: Container(
                   alignment: Alignment.center,
                   width: 300,
+                  height: 40,
                   decoration: BoxDecoration(
-                    color: const Color.fromRGBO(57, 62, 70, 1),
+                    gradient: const LinearGradient(
+                      colors: [
+                        Color.fromARGB(130, 112, 114, 235),
+                        Color.fromARGB(123, 155, 39, 176),
+                        Color.fromARGB(127, 155, 39, 176),
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    //color: const Color(0xFF1E3A8A),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: const Text(
                     "About",
                     style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
                   ),
                 ),
               ),
@@ -149,17 +180,27 @@ class _AdminHomepageState extends State {
                 },
                 child: Container(
                   alignment: Alignment.center,
+                  height: 40,
                   width: 300,
                   decoration: BoxDecoration(
-                    color: const Color.fromRGBO(57, 62, 70, 1),
+                    gradient: const LinearGradient(
+                      colors: [
+                        Color.fromARGB(130, 112, 114, 235),
+                        Color.fromARGB(123, 155, 39, 176),
+                        Color.fromARGB(127, 155, 39, 176),
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    //color: const Color(0xFF1E3A8A),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: const Text(
                     "FeedBack",
                     style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
                   ),
                 ),
               ),
@@ -179,17 +220,27 @@ class _AdminHomepageState extends State {
                 },
                 child: Container(
                   alignment: Alignment.center,
+                  height: 40,
                   width: 300,
                   decoration: BoxDecoration(
-                    color: const Color.fromRGBO(57, 62, 70, 1),
+                    gradient: const LinearGradient(
+                      colors: [
+                        Color.fromARGB(130, 112, 114, 235),
+                        Color.fromARGB(123, 155, 39, 176),
+                        Color.fromARGB(127, 155, 39, 176),
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    //color: const Color(0xFF1E3A8A),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: const Text(
                     "Logout",
                     style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
                   ),
                 ),
               ),
@@ -204,7 +255,7 @@ class _AdminHomepageState extends State {
                   Container(
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Color.fromRGBO(57, 62, 70, 1),
+                      color: const Color(0xFF1E3A8A),
                     ),
                     height: 50,
                     width: 50,
@@ -219,7 +270,7 @@ class _AdminHomepageState extends State {
                     width: 50,
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Color.fromRGBO(57, 62, 70, 1),
+                      color: const Color(0xFF1E3A8A),
                     ),
                     child: const Icon(
                       Icons.call,
@@ -232,7 +283,7 @@ class _AdminHomepageState extends State {
                     width: 50,
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Color.fromRGBO(57, 62, 70, 1),
+                      color: const Color(0xFF1E3A8A),
                     ),
                     child: const Icon(
                       Icons.chat,
@@ -255,7 +306,7 @@ class _AdminHomepageState extends State {
               Text(
                 "Completed Projects",
                 style: TextStyle(
-                    fontSize: 25,
+                    fontSize: 20,
                     fontWeight: FontWeight.w400,
                     color: Colors.black),
               ),
@@ -274,7 +325,7 @@ class _AdminHomepageState extends State {
           ),
           //listview for horizontal containers
           SizedBox(
-            height: 200,
+            height: 190,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: 5,
@@ -285,7 +336,18 @@ class _AdminHomepageState extends State {
                       padding: const EdgeInsets.all(15),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: const Color.fromARGB(255, 168, 141, 213),
+
+                        gradient: const LinearGradient(
+                          colors: [
+                            Color.fromARGB(130, 112, 114, 235),
+                            Color.fromARGB(123, 155, 39, 176),
+                            Color.fromARGB(127, 155, 39, 176),
+                          ],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                        ),
+
+                        //color: const Color.fromARGB(85, 99, 101, 241),
                       ),
                       height: 200,
                       width: 200,
@@ -296,7 +358,7 @@ class _AdminHomepageState extends State {
                           const Text(
                             "Real Estate App Design",
                             style: TextStyle(
-                                fontSize: 22,
+                                fontSize: 20,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.black),
                           ),
@@ -304,7 +366,7 @@ class _AdminHomepageState extends State {
                           const Text(
                             "Team Members",
                             style: TextStyle(
-                                fontSize: 17,
+                                fontSize: 15,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black),
                           ),
@@ -320,8 +382,8 @@ class _AdminHomepageState extends State {
                                   Container(
                                     height: 20,
                                     width: 20,
-                                    decoration: BoxDecoration(
-                                        color: Colors.deepPurple,
+                                    decoration: const BoxDecoration(
+                                        color: Color(0xFF1E3A8A),
                                         shape: BoxShape.circle),
                                   ),
                                 ]);
@@ -336,16 +398,16 @@ class _AdminHomepageState extends State {
                                 "Completed",
                                 style: TextStyle(
                                     fontSize: 15,
-                                    fontWeight: FontWeight.w300,
-                                    color: Colors.white),
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black),
                               ),
                               Spacer(),
                               Text(
                                 "100%",
                                 style: TextStyle(
                                     fontSize: 15,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.white),
+                                    fontWeight: FontWeight.w700,
+                                    color: Colors.black),
                               ),
                             ],
                           ),
@@ -355,7 +417,7 @@ class _AdminHomepageState extends State {
                           //progess indicator
                           const LinearProgressIndicator(
                             value: 0.7,
-                            color: Colors.deepPurple,
+                            color: Color(0xFF1E3A8A),
                           ),
                         ],
                       ),
@@ -380,7 +442,7 @@ class _AdminHomepageState extends State {
                 Text(
                   "Ongoing Projects",
                   style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 20,
                       fontWeight: FontWeight.w400,
                       color: Colors.black),
                 ),
@@ -406,11 +468,20 @@ class _AdminHomepageState extends State {
               itemBuilder: (context, index) {
                 return Column(children: [
                   Container(
-                    height: 170,
+                    height: 150,
                     width: 400,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: const Color.fromARGB(255, 168, 141, 213),
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromARGB(130, 112, 114, 235),
+                          Color.fromARGB(123, 155, 39, 176),
+                          Color.fromARGB(127, 155, 39, 176),
+                        ],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ),
+                      //color: const Color.fromARGB(85, 99, 101, 241),
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
@@ -425,15 +496,15 @@ class _AdminHomepageState extends State {
                               const Text(
                                 "Real Estate App Design",
                                 style: TextStyle(
-                                    fontSize: 25,
+                                    fontSize: 20,
                                     fontWeight: FontWeight.w400,
                                     color: Colors.black),
                               ),
                               const Text(
                                 "Team Members",
                                 style: TextStyle(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.w300,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
                                     color: Colors.black),
                               ),
                               const SizedBox(
@@ -453,7 +524,7 @@ class _AdminHomepageState extends State {
                                           height: 20,
                                           width: 20,
                                           decoration: const BoxDecoration(
-                                              color: Colors.deepPurple,
+                                              color: Color(0xFF1E3A8A),
                                               shape: BoxShape.circle),
                                         ),
                                       ],
@@ -467,7 +538,7 @@ class _AdminHomepageState extends State {
                                 style: TextStyle(
                                     fontSize: 17,
                                     fontWeight: FontWeight.w500,
-                                    color: Colors.white),
+                                    color: Colors.black),
                               ),
                             ],
                           ),
@@ -524,7 +595,7 @@ class _AdminHomepageState extends State {
           BottomNavigationBarItem(
             icon: GestureDetector(
               //onTap:***********************************
-              child: Icon(
+              child: const Icon(
                 Icons.home,
                 color: Colors.black,
                 size: 30,
@@ -542,7 +613,7 @@ class _AdminHomepageState extends State {
                       builder: (context) => const ProjectDataFilling()),
                 );
               },
-              child: Icon(
+              child: const Icon(
                 Icons.add,
                 color: Colors.black,
                 size: 35,
@@ -563,7 +634,7 @@ class _AdminHomepageState extends State {
                       builder: (context) => const AdminSchedule()),
                 );
               },
-              child: Icon(
+              child: const Icon(
                 Icons.schedule,
                 color: Colors.black,
                 size: 35,
@@ -588,7 +659,7 @@ class _AdminHomepageState extends State {
                   MaterialPageRoute(builder: (context) => const UserProfile()),
                 );
               },
-              child: Icon(
+              child: const Icon(
                 Icons.person,
                 color: Colors.black,
                 size: 30,

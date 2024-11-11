@@ -18,7 +18,7 @@ class _AdminUserScreenState extends State {
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back_ios_new_outlined,
-            color: Colors.white,
+            color: Colors.black,
           ), // Leading Icon
           onPressed: () {
             // Perform some action
@@ -29,12 +29,12 @@ class _AdminUserScreenState extends State {
             );
           },
         ),
-        backgroundColor: const Color.fromRGBO(57, 62, 70, 1),
+        backgroundColor: Colors.white,
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
         padding: const EdgeInsets.all(20),
-        color: const Color.fromRGBO(57, 62, 70, 1),
+        color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -42,11 +42,9 @@ class _AdminUserScreenState extends State {
             // Admin Section
             Column(
               children: [
-                const Icon(
-                  Icons.person, // Admin icon
-                  size: 100,
-                  color: Colors.grey,
-                ),
+                const Icon(Icons.person, // Admin icon
+                    size: 100,
+                    color: const Color(0xFF1E3A8A)),
                 const SizedBox(height: 10),
                 GestureDetector(
                   onTap: () {
@@ -61,7 +59,17 @@ class _AdminUserScreenState extends State {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 50, vertical: 15),
                     decoration: BoxDecoration(
-                      color: Color.fromRGBO(254, 211, 106, 1),
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(130, 112, 114, 235),
+                          const Color.fromARGB(123, 155, 39, 176),
+                          const Color.fromARGB(127, 155, 39, 176),
+                        ],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ),
+
+                      //color: Color.fromRGBO(254, 211, 106, 1),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: const Text(
@@ -78,11 +86,9 @@ class _AdminUserScreenState extends State {
             // User Section
             Column(
               children: [
-                const Icon(
-                  Icons.people, // User icon
-                  size: 100,
-                  color: Colors.grey,
-                ),
+                const Icon(Icons.people, // User icon
+                    size: 100,
+                    color: const Color(0xFF1E3A8A)),
                 const SizedBox(height: 10),
                 GestureDetector(
                   onTap: () {
@@ -97,7 +103,17 @@ class _AdminUserScreenState extends State {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 50, vertical: 15),
                     decoration: BoxDecoration(
-                      color: Color.fromRGBO(254, 211, 106, 1),
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(130, 112, 114, 235),
+                          const Color.fromARGB(123, 155, 39, 176),
+                          const Color.fromARGB(127, 155, 39, 176),
+                        ],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ),
+
+                      //color: Color.fromRGBO(254, 211, 106, 1),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: const Text(

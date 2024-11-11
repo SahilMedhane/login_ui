@@ -13,12 +13,12 @@ class _LoginPageState extends State {
   @override
   Widget build(context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(57, 62, 70, 1),
+      backgroundColor: Colors.white,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back_ios_new_outlined,
-            color: Colors.white,
+            color: Colors.black,
           ), // Leading Icon
           onPressed: () {
             // Perform some action
@@ -29,7 +29,7 @@ class _LoginPageState extends State {
             );
           },
         ),
-        backgroundColor: const Color.fromRGBO(57, 62, 70, 1),
+        backgroundColor: Colors.white,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -45,23 +45,27 @@ class _LoginPageState extends State {
               style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white),
+                  color: Colors.black),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30.0),
-            const TextField(
+            TextField(
               decoration: InputDecoration(
                 labelText: 'Username',
-                labelStyle: TextStyle(color: Colors.white),
-                border: OutlineInputBorder(),
+                labelStyle: const TextStyle(color: Colors.black),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
               ),
             ),
             const SizedBox(height: 20.0),
-            const TextField(
+            TextField(
               decoration: InputDecoration(
                 labelText: 'Password',
-                labelStyle: TextStyle(color: Colors.white),
-                border: OutlineInputBorder(),
+                labelStyle: const TextStyle(color: Colors.black),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
               ),
               obscureText: true,
             ),
@@ -77,13 +81,14 @@ class _LoginPageState extends State {
               child: Container(
                 height: 50.0,
                 decoration: BoxDecoration(
-                  gradient: const LinearGradient(
+                  gradient: LinearGradient(
                     colors: [
-                      Color.fromARGB(255, 33, 25, 255),
-                      Color.fromARGB(255, 116, 30, 254),
+                      Color.fromARGB(130, 112, 114, 235),
+                      const Color.fromARGB(123, 155, 39, 176),
+                      const Color.fromARGB(127, 155, 39, 176),
                     ],
-                    begin: Alignment.centerLeft,
-                    end: Alignment.centerRight,
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
                   ),
                   borderRadius: BorderRadius.circular(8.0),
                 ),
@@ -91,7 +96,7 @@ class _LoginPageState extends State {
                   child: Text(
                     'Login',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
                     ),
@@ -104,7 +109,7 @@ class _LoginPageState extends State {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text("Don't have an account?",
-                    style: TextStyle(color: Colors.white)),
+                    style: TextStyle(color: Colors.black)),
                 TextButton(
                   onPressed: () {
                     // Action for Sign Up
@@ -117,9 +122,7 @@ class _LoginPageState extends State {
                   },
                   child: const Text(
                     'Sign Up',
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 85, 201, 240),
-                    ),
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
               ],

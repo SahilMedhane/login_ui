@@ -13,25 +13,19 @@ class _UserTaskDetailsState extends State<UserTaskDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.grey,
-        iconTheme: const IconThemeData(color: Colors.white),
+        backgroundColor: Colors.white,
+        iconTheme: const IconThemeData(color: Colors.black),
         title: const Text(
           "Task Details",
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 25,
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
         centerTitle: true,
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            color: const Color.fromRGBO(34, 40, 49, 1),
-            borderRadius: BorderRadius.circular(30),
-          ),
-        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -42,7 +36,16 @@ class _UserTaskDetailsState extends State<UserTaskDetails> {
             Container(
               padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(12)),
+                  gradient: LinearGradient(
+                    colors: [
+                      Color.fromARGB(130, 112, 114, 235),
+                      const Color.fromARGB(123, 155, 39, 176),
+                      const Color.fromARGB(127, 155, 39, 176),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  borderRadius: BorderRadius.circular(12)),
               child: Row(
                 children: [
                   const Icon(Icons.task, color: Colors.blueAccent, size: 28),
@@ -66,7 +69,16 @@ class _UserTaskDetailsState extends State<UserTaskDetails> {
             Container(
               padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(12)),
+                  gradient: LinearGradient(
+                    colors: [
+                      Color.fromARGB(130, 112, 114, 235),
+                      const Color.fromARGB(123, 155, 39, 176),
+                      const Color.fromARGB(127, 155, 39, 176),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  borderRadius: BorderRadius.circular(12)),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -87,7 +99,16 @@ class _UserTaskDetailsState extends State<UserTaskDetails> {
             Container(
               padding: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(12)),
+                  gradient: LinearGradient(
+                    colors: [
+                      Color.fromARGB(130, 112, 114, 235),
+                      const Color.fromARGB(123, 155, 39, 176),
+                      const Color.fromARGB(127, 155, 39, 176),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  borderRadius: BorderRadius.circular(12)),
               child: Row(
                 children: [
                   const Icon(Icons.date_range,
@@ -142,7 +163,7 @@ class _UserTaskDetailsState extends State<UserTaskDetails> {
                     horizontal: 30,
                     vertical: 12,
                   ),
-                  backgroundColor: Colors.blueAccent,
+                  backgroundColor: const Color(0xFF1E3A8A),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),

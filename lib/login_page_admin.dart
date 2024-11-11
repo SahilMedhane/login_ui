@@ -14,12 +14,12 @@ class _LoginPageState extends State {
   @override
   Widget build(context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(57, 62, 70, 1),
+      backgroundColor: Colors.white,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back_ios_new_outlined,
-            color: Colors.white,
+            color: Colors.black,
           ), // Leading Icon
           onPressed: () {
             // Perform some action
@@ -30,7 +30,7 @@ class _LoginPageState extends State {
             );
           },
         ),
-        backgroundColor: const Color.fromRGBO(57, 62, 70, 1),
+        backgroundColor: Colors.white,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -46,23 +46,25 @@ class _LoginPageState extends State {
               style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white),
+                  color: Colors.black),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30.0),
             const TextField(
               decoration: InputDecoration(
                 labelText: 'Username',
-                labelStyle: TextStyle(color: Colors.white),
-                border: OutlineInputBorder(),
+                labelStyle: TextStyle(color: Colors.black),
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20))),
               ),
             ),
             const SizedBox(height: 20.0),
             const TextField(
               decoration: InputDecoration(
                 labelText: 'Password',
-                labelStyle: TextStyle(color: Colors.white),
-                border: OutlineInputBorder(),
+                labelStyle: TextStyle(color: Colors.black),
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20))),
               ),
               obscureText: true,
             ),
@@ -79,7 +81,16 @@ class _LoginPageState extends State {
               child: Container(
                 height: 50.0,
                 decoration: BoxDecoration(
-                  color: Color.fromRGBO(254, 211, 106, 1),
+                  gradient: LinearGradient(
+                    colors: [
+                      Color.fromARGB(130, 112, 114, 235),
+                      const Color.fromARGB(123, 155, 39, 176),
+                      const Color.fromARGB(127, 155, 39, 176),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  //color: Color.fromRGBO(254, 211, 106, 1),
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: const Center(
@@ -99,7 +110,7 @@ class _LoginPageState extends State {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text("Don't have an account?",
-                    style: TextStyle(color: Colors.white)),
+                    style: TextStyle(color: Colors.black)),
                 TextButton(
                   onPressed: () {
                     // Action for Sign Up
@@ -112,9 +123,7 @@ class _LoginPageState extends State {
                   },
                   child: const Text(
                     'Sign Up',
-                    style: TextStyle(
-                      color: Color.fromRGBO(254, 211, 106, 1),
-                    ),
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
               ],

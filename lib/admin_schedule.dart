@@ -14,12 +14,12 @@ class _AdminScheduleState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(34, 40, 49, 1),
+      backgroundColor: Colors.white,
 
       /// TITLE
 
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(34, 40, 49, 1),
+        backgroundColor: Colors.white,
         leading: GestureDetector(
             onTap: () {
               Navigator.pop(context);
@@ -28,11 +28,11 @@ class _AdminScheduleState extends State {
                 MaterialPageRoute(builder: (context) => const AdminHomePage()),
               );
             },
-            child: Icon(Icons.arrow_back, color: Colors.grey)),
+            child: Icon(Icons.arrow_back, color: Colors.black)),
         title: const Text(
           "Schedule",
           style: TextStyle(
-              fontSize: 25, fontWeight: FontWeight.w700, color: Colors.white),
+              fontSize: 25, fontWeight: FontWeight.w700, color: Colors.black),
         ),
         centerTitle: true,
       ),
@@ -50,7 +50,7 @@ class _AdminScheduleState extends State {
                   style: TextStyle(
                       fontSize: 50,
                       fontWeight: FontWeight.w700,
-                      color: Colors.white),
+                      color: Colors.black),
                 ),
 
                 const SizedBox(
@@ -67,7 +67,7 @@ class _AdminScheduleState extends State {
                       style: TextStyle(
                           fontSize: 16,
                           //fontWeight: FontWeight.w700,
-                          color: Colors.white),
+                          color: Colors.black),
                     ),
 
                     /// MONTH YEAR
@@ -76,7 +76,7 @@ class _AdminScheduleState extends State {
                       style: TextStyle(
                           fontSize: 16,
                           //fontWeight: FontWeight.w700,
-                          color: Colors.white),
+                          color: Colors.black),
                     ),
                   ],
                 ),
@@ -88,7 +88,7 @@ class _AdminScheduleState extends State {
                   width: 100,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: const Color.fromRGBO(57, 62, 70, 1),
+                    color: const Color(0xFF1E3A8A),
                   ),
                   child: const Center(
                     child: Text(
@@ -96,7 +96,7 @@ class _AdminScheduleState extends State {
                       style: TextStyle(
                           fontSize: 16,
                           //fontWeight: FontWeight.w700,
-                          color: Colors.cyanAccent),
+                          color: Colors.white),
                     ),
                   ),
                 ),
@@ -124,7 +124,16 @@ class _AdminScheduleState extends State {
                             width: 60,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: const Color.fromRGBO(57, 62, 70, 1),
+                              gradient: LinearGradient(
+                                colors: [
+                                  Color.fromARGB(130, 112, 114, 235),
+                                  const Color.fromARGB(123, 155, 39, 176),
+                                  const Color.fromARGB(127, 155, 39, 176),
+                                ],
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                              ),
+                              //color: const Color.fromRGBO(57, 62, 70, 1),
                             ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -134,14 +143,14 @@ class _AdminScheduleState extends State {
                                   style: TextStyle(
                                       fontSize: 16,
                                       //fontWeight: FontWeight.w700,
-                                      color: Colors.grey),
+                                      color: Colors.black),
                                 ),
                                 Text(
                                   "$index",
                                   style: const TextStyle(
                                       fontSize: 35,
                                       //fontWeight: FontWeight.w700,
-                                      color: Colors.white),
+                                      color: Colors.black),
                                 )
                               ],
                             ),
@@ -170,7 +179,7 @@ class _AdminScheduleState extends State {
                   style: TextStyle(
                       fontSize: 16,
                       //fontWeight: FontWeight.w700,
-                      color: Colors.grey),
+                      color: Colors.black),
                 ),
                 SizedBox(
                   width: 30,
@@ -180,12 +189,12 @@ class _AdminScheduleState extends State {
                   style: TextStyle(
                       fontSize: 16,
                       //fontWeight: FontWeight.w700,
-                      color: Colors.grey),
+                      color: Colors.black),
                 ),
                 Spacer(),
                 Icon(
                   Icons.sort_rounded,
-                  color: Colors.grey,
+                  color: Colors.black,
                 ),
               ],
             ),
@@ -211,7 +220,7 @@ class _AdminScheduleState extends State {
                               style: TextStyle(
                                   fontSize: 16,
                                   //fontWeight: FontWeight.w700,
-                                  color: Colors.grey),
+                                  color: Colors.black),
                             ),
                             const SizedBox(
                               width: 30,
@@ -231,7 +240,16 @@ class _AdminScheduleState extends State {
                                 width: 300,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
-                                  color: const Color.fromRGBO(57, 62, 70, 1),
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      Color.fromARGB(130, 112, 114, 235),
+                                      const Color.fromARGB(123, 155, 39, 176),
+                                      const Color.fromARGB(127, 155, 39, 176),
+                                    ],
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                  ),
+                                  //color: const Color.fromRGBO(57, 62, 70, 1),
                                 ),
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(
@@ -249,25 +267,24 @@ class _AdminScheduleState extends State {
                                             style: TextStyle(
                                                 fontSize: 22,
                                                 //fontWeight: FontWeight.w700,
-                                                color: Colors.white),
+                                                color: Colors.black),
                                           ),
                                           const Spacer(),
                                           Container(
                                             decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(10),
-                                              color: const Color.fromRGBO(
-                                                  34, 40, 49, 1),
+                                              color: const Color(0xFF1E3A8A),
                                             ),
                                             child: const Padding(
                                               padding: EdgeInsets.symmetric(
-                                                  horizontal: 5.0),
+                                                  horizontal: 10.0),
                                               child: Text(
                                                 "Details",
                                                 style: TextStyle(
                                                     fontSize: 16,
                                                     //fontWeight: FontWeight.w700,
-                                                    color: Colors.cyanAccent),
+                                                    color: Colors.white),
                                               ),
                                             ),
                                           ),
@@ -278,7 +295,7 @@ class _AdminScheduleState extends State {
                                         style: TextStyle(
                                             fontSize: 16,
                                             //fontWeight: FontWeight.w700,
-                                            color: Colors.white),
+                                            color: Colors.black),
                                       ),
                                     ],
                                   ),

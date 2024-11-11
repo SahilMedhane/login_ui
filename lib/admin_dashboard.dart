@@ -5,13 +5,13 @@ class AdminDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(34, 40, 49, 1),
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(34, 40, 49, 1),
+        backgroundColor: Colors.white,
         title: const Text(
           "DashBoard",
           style: TextStyle(
-              fontSize: 25, fontWeight: FontWeight.w500, color: Colors.white),
+              fontSize: 25, fontWeight: FontWeight.w500, color: Colors.black),
         ),
         centerTitle: true,
         leading: GestureDetector(
@@ -20,7 +20,7 @@ class AdminDashboard extends StatelessWidget {
           },
           child: const Icon(
             Icons.arrow_back,
-            color: Colors.white,
+            color: Colors.black,
             size: 30,
           ),
         ),
@@ -35,7 +35,7 @@ class AdminDashboard extends StatelessWidget {
               style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.w500,
-                  color: Colors.white),
+                  color: Colors.black),
             ),
             const SizedBox(
               height: 10,
@@ -48,7 +48,18 @@ class AdminDashboard extends StatelessWidget {
                     padding: const EdgeInsets.all(15),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: const Color.fromRGBO(57, 62, 70, 1),
+
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(130, 112, 114, 235),
+                          const Color.fromARGB(123, 155, 39, 176),
+                          const Color.fromARGB(127, 155, 39, 176),
+                        ],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ),
+
+                      //color: const Color.fromRGBO(57, 62, 70, 1),
                     ),
                     height: 200,
                     width: 250,
@@ -73,7 +84,7 @@ class AdminDashboard extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w500,
-                              color: Colors.white),
+                              color: Colors.black),
                         ),
                         const Spacer(),
                         const Text(
@@ -81,14 +92,14 @@ class AdminDashboard extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 30,
                               fontWeight: FontWeight.w400,
-                              color: Colors.white),
+                              color: Colors.black),
                         ),
                         const Spacer(),
                         const Row(
                           children: [
                             Icon(
                               Icons.arrow_upward,
-                              color: Colors.green,
+                              color: Colors.black,
                               size: 25,
                             ),
                             Text(
@@ -96,7 +107,7 @@ class AdminDashboard extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w400,
-                                  color: Colors.white),
+                                  color: Colors.black),
                             ),
                           ],
                         ),
@@ -112,7 +123,16 @@ class AdminDashboard extends StatelessWidget {
                     padding: const EdgeInsets.all(15),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
-                      color: const Color.fromRGBO(57, 62, 70, 1),
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(130, 112, 114, 235),
+                          const Color.fromARGB(123, 155, 39, 176),
+                          const Color.fromARGB(127, 155, 39, 176),
+                        ],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ),
+                      //color: const Color.fromRGBO(57, 62, 70, 1),
                     ),
                     height: 200,
                     width: 250,
@@ -137,7 +157,7 @@ class AdminDashboard extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w500,
-                              color: Colors.white),
+                              color: Colors.black),
                         ),
                         const Spacer(),
                         const Text(
@@ -145,14 +165,14 @@ class AdminDashboard extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 30,
                               fontWeight: FontWeight.w400,
-                              color: Colors.white),
+                              color: Colors.black),
                         ),
                         const Spacer(),
                         const Row(
                           children: [
                             Icon(
                               Icons.arrow_downward,
-                              color: Colors.red,
+                              color: Colors.black,
                               size: 25,
                             ),
                             Text(
@@ -160,7 +180,7 @@ class AdminDashboard extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w400,
-                                  color: Colors.white),
+                                  color: Colors.black),
                             ),
                           ],
                         ),

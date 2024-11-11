@@ -12,19 +12,19 @@ class _UserAccountState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         flexibleSpace: Container(
           decoration: BoxDecoration(
-              color: const Color.fromRGBO(34, 40, 49, 1),
-              borderRadius: BorderRadius.circular(30)),
+              color: Colors.white, borderRadius: BorderRadius.circular(30)),
         ),
-        iconTheme: const IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: Colors.black),
         centerTitle: true,
         title: const Text("User Profile",
             style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
-                color: Colors.white)),
+                color: Colors.black)),
         backgroundColor: Colors.white,
       ),
       body: Padding(
@@ -37,7 +37,16 @@ class _UserAccountState extends State {
               height: 120,
               width: 120,
               decoration: const BoxDecoration(
-                  color: Colors.grey, shape: BoxShape.circle),
+                  gradient: LinearGradient(
+                    colors: [
+                      Color.fromARGB(130, 112, 114, 235),
+                      const Color.fromARGB(123, 155, 39, 176),
+                      const Color.fromARGB(127, 155, 39, 176),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  shape: BoxShape.circle),
               child: const Icon(
                 Icons.image,
                 size: 50,
@@ -102,7 +111,7 @@ class _UserAccountState extends State {
                     MaterialPageRoute(builder: (context) => LoginPageUser()));
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.redAccent,
+                backgroundColor: const Color(0xFF1E3A8A),
                 padding:
                     const EdgeInsets.symmetric(horizontal: 40, vertical: 12),
                 shape: RoundedRectangleBorder(

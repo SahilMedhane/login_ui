@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_ui/admin_schedule.dart';
+import 'package:login_ui/phase_selection.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
 class ProjectDetails extends StatefulWidget {
@@ -13,7 +14,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(34, 40, 49, 1),
+      backgroundColor: Colors.white,
 
       /// PROJECT DETAILS
 
@@ -28,15 +29,15 @@ class _ProjectDetailsState extends State<ProjectDetails> {
           },
           child: const Icon(
             Icons.arrow_back,
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
         title: const Text(
           "Project Details",
-          style: TextStyle(fontSize: 25, color: Colors.white),
+          style: TextStyle(fontSize: 25, color: Colors.black),
         ),
         centerTitle: true,
-        backgroundColor: const Color.fromRGBO(34, 40, 49, 1),
+        backgroundColor: Colors.white,
       ),
 
       body: Padding(
@@ -49,7 +50,16 @@ class _ProjectDetailsState extends State<ProjectDetails> {
               height: 70,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                  color: const Color.fromRGBO(57, 62, 70, 1),
+                  gradient: LinearGradient(
+                    colors: [
+                      Color.fromARGB(130, 112, 114, 235),
+                      const Color.fromARGB(123, 155, 39, 176),
+                      const Color.fromARGB(127, 155, 39, 176),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  //color: const Color.fromRGBO(57, 62, 70, 1),
                   borderRadius: BorderRadius.circular(10)),
               child: const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8.0),
@@ -57,7 +67,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                   children: [
                     Icon(
                       Icons.task,
-                      color: Colors.blue,
+                      color: const Color(0xFF1E3A8A),
                       size: 30,
                     ),
                     SizedBox(
@@ -65,7 +75,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                     ),
                     Text(
                       "Project Name ",
-                      style: TextStyle(fontSize: 25, color: Colors.white),
+                      style: TextStyle(fontSize: 25, color: Colors.black),
                     )
                   ],
                 ),
@@ -82,7 +92,16 @@ class _ProjectDetailsState extends State<ProjectDetails> {
               height: 170,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                  color: const Color.fromRGBO(57, 62, 70, 1),
+                  gradient: LinearGradient(
+                    colors: [
+                      Color.fromARGB(130, 112, 114, 235),
+                      const Color.fromARGB(123, 155, 39, 176),
+                      const Color.fromARGB(127, 155, 39, 176),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  //color: const Color.fromRGBO(57, 62, 70, 1),
                   borderRadius: BorderRadius.circular(10)),
               child: const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8.0),
@@ -90,7 +109,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                   children: [
                     Icon(
                       Icons.text_snippet,
-                      color: Colors.blue,
+                      color: const Color(0xFF1E3A8A),
                       size: 30,
                     ),
                     SizedBox(
@@ -98,7 +117,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                     ),
                     Text(
                       "Project Description",
-                      style: TextStyle(fontSize: 25, color: Colors.white),
+                      style: TextStyle(fontSize: 25, color: Colors.black),
                     )
                   ],
                 ),
@@ -115,7 +134,16 @@ class _ProjectDetailsState extends State<ProjectDetails> {
               height: 70,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                  color: const Color.fromRGBO(57, 62, 70, 1),
+                  gradient: LinearGradient(
+                    colors: [
+                      Color.fromARGB(130, 112, 114, 235),
+                      const Color.fromARGB(123, 155, 39, 176),
+                      const Color.fromARGB(127, 155, 39, 176),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  //color: const Color.fromRGBO(57, 62, 70, 1),
                   borderRadius: BorderRadius.circular(10)),
               child: const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8.0),
@@ -123,7 +151,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                   children: [
                     Icon(
                       Icons.calendar_month_outlined,
-                      color: Colors.blue,
+                      color: const Color(0xFF1E3A8A),
                       size: 30,
                     ),
                     SizedBox(
@@ -131,7 +159,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                     ),
                     Text(
                       "Due Date : 11 Nov 2024 ",
-                      style: TextStyle(fontSize: 25, color: Colors.white),
+                      style: TextStyle(fontSize: 25, color: Colors.black),
                     )
                   ],
                 ),
@@ -148,7 +176,16 @@ class _ProjectDetailsState extends State<ProjectDetails> {
               height: 70,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                  color: const Color.fromRGBO(57, 62, 70, 1),
+                  gradient: LinearGradient(
+                    colors: [
+                      Color.fromARGB(130, 112, 114, 235),
+                      const Color.fromARGB(123, 155, 39, 176),
+                      const Color.fromARGB(127, 155, 39, 176),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  //color: const Color.fromRGBO(57, 62, 70, 1),
                   borderRadius: BorderRadius.circular(10)),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -156,7 +193,7 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                   children: [
                     const Icon(
                       Icons.add_task_rounded,
-                      color: Colors.blue,
+                      color: const Color(0xFF1E3A8A),
                       size: 30,
                     ),
 
@@ -165,24 +202,31 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                     ),
                     const Text(
                       "Project Phases  ",
-                      style: TextStyle(fontSize: 25, color: Colors.white),
+                      style: TextStyle(fontSize: 25, color: Colors.black),
                     ),
 
                     const Spacer(),
 
                     /// OPEN BUTTON
 
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: const Color.fromRGBO(34, 40, 49, 1),
-                      ),
-                      child: const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10.0),
-                        child: Text(
-                          "Open",
-                          style:
-                              TextStyle(fontSize: 16, color: Colors.cyanAccent),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PhaseSelection()));
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: const Color(0xFF1E3A8A),
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 10.0),
+                          child: Text(
+                            "Open",
+                            style: TextStyle(fontSize: 16, color: Colors.white),
+                          ),
                         ),
                       ),
                     ),
@@ -203,8 +247,10 @@ class _ProjectDetailsState extends State<ProjectDetails> {
               child: CircularProgressIndicator(
                 value: 0.8,
                 strokeWidth: 38,
-                valueColor: AlwaysStoppedAnimation(Colors.green),
-                backgroundColor: Color.fromRGBO(57, 62, 70, 1),
+                valueColor: AlwaysStoppedAnimation(
+                  Color(0xFF1E3A8A),
+                ),
+                backgroundColor: Colors.red,
               ),
             ),
           ],

@@ -4,9 +4,6 @@ import 'package:login_ui/user_profile.dart';
 import 'package:login_ui/user_task_details.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
-//faint- Color.fromRGBO(57, 62, 70, 1)
-//dark - Color.fromRGBO(34, 40, 49, 1)
-
 class UserHomePage extends StatefulWidget {
   const UserHomePage({super.key});
 
@@ -15,8 +12,8 @@ class UserHomePage extends StatefulWidget {
 }
 
 class _UserProfileState extends State {
-  //adding a list of hardcoded task, badhme realtime se bhar denge
-  final List<Map<String, String>> tasks = [
+  ///adding a list of hardcoded task, badhme realtime se bhar denge
+  final List tasks = [
     {
       "title": 'Task 1',
       'description': 'Complete the project documentation.',
@@ -38,44 +35,34 @@ class _UserProfileState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         iconTheme: const IconThemeData(
-          color: Colors.white, // Set drawer icon color to white
+          color: Colors.black, // Set drawer icon color to white
         ),
-        title: Text(
+        title: const Text(
           "User Home Page",
           style: TextStyle(
             fontSize: 23,
             fontWeight: FontWeight.bold,
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.grey, // appbar che curve kopre
+        backgroundColor: Colors.white, // appbar che curve kopre
         flexibleSpace: Container(
-          decoration: BoxDecoration(
-            color: const Color.fromRGBO(34, 40, 49, 1),
-            /*gradient: const LinearGradient(
-                colors: [Colors.blueAccent, Colors.deepPurpleAccent]),*/
-            borderRadius: const BorderRadius.vertical(
+          decoration: const BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.vertical(
               bottom: Radius.circular(30), // Smooth, larger rounding at bottom
             ),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(.5),
-                spreadRadius: 4,
-                blurRadius: 15,
-                offset: const Offset(0, 10), // Vertical shadow effect
-              ),
-            ],
           ),
         ),
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: IconButton(
-              icon: const Icon(Icons.notifications, color: Colors.white),
+              icon: const Icon(Icons.notifications, color: Colors.black),
               onPressed: () {
                 // handle press for the notification button
               },
@@ -87,21 +74,35 @@ class _UserProfileState extends State {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            DrawerHeader(
-              decoration: const BoxDecoration(
-                color: Color.fromRGBO(34, 40, 49, 1),
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color.fromARGB(130, 112, 114, 235),
+                    const Color.fromARGB(123, 155, 39, 176),
+                    const Color.fromARGB(127, 155, 39, 176),
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
               ),
               child: Text(
                 'User Profile',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 25,
                 ),
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.account_box),
-              title: const Text("Profile"),
+              leading: const Icon(
+                Icons.account_box,
+                color: Colors.black,
+              ),
+              title: const Text(
+                "Profile",
+                style: TextStyle(color: Colors.black),
+              ),
               onTap: () {
                 Navigator.pop(context); // Close the drawer
                 Navigator.push(
@@ -118,15 +119,21 @@ class _UserProfileState extends State {
               },
             ),*/
             ListTile(
-              leading: const Icon(Icons.logout),
-              title: const Text('Logout'),
+              leading: const Icon(
+                Icons.logout,
+                color: Colors.black,
+              ),
+              title: const Text(
+                'Logout',
+                style: TextStyle(color: Colors.black),
+              ),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: (context) =>
-                            LoginPageUser())); // Close the drawer
+                            const LoginPageUser())); // Close the drawer
               },
             ),
           ],
@@ -146,44 +153,59 @@ class _UserProfileState extends State {
                       builder: (context) => const UserTaskDetails()),
                 );
               },
-              child: Card(
-                color: Colors.white,
-                elevation: 2,
-                margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        tasks[index]['title']!,
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
+              child: Container(
+                child: Card(
+                  //color: Colors.red,
+                  elevation: 2,
+                  margin:
+                      const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(130, 112, 114, 235),
+                          Color.fromARGB(123, 155, 39, 176),
+                          Color.fromARGB(127, 155, 39, 176),
+                        ],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
                       ),
-                      const SizedBox(height: 8),
-                      Text(
-                        tasks[index]['description']!,
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.black,
-                        ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            tasks[index]['title']!,
+                            style: const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            tasks[index]['description']!,
+                            style: const TextStyle(
+                              fontSize: 16,
+                              color: Colors.black,
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            tasks[index]['dueDate']!,
+                            style: const TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.red,
+                            ),
+                          ),
+                        ],
                       ),
-                      const SizedBox(height: 8),
-                      Text(
-                        tasks[index]['dueDate']!,
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.red,
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 ),
               ),

@@ -5,6 +5,7 @@ import 'package:login_ui/admin_feedback_page.dart';
 import 'package:login_ui/admin_schedule.dart';
 import 'package:login_ui/login_page_admin.dart';
 import 'package:login_ui/project_data_filling.dart';
+import 'package:login_ui/project_details.dart';
 import 'package:login_ui/user_profile.dart';
 
 class AdminHomePage extends StatefulWidget {
@@ -467,111 +468,119 @@ class _AdminHomepageState extends State {
               itemCount: 10,
               itemBuilder: (context, index) {
                 return Column(children: [
-                  Container(
-                    height: 150,
-                    width: 400,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      gradient: const LinearGradient(
-                        colors: [
-                          Color.fromARGB(130, 112, 114, 235),
-                          Color.fromARGB(123, 155, 39, 176),
-                          Color.fromARGB(127, 155, 39, 176),
-                        ],
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProjectDetails()));
+                    },
+                    child: Container(
+                      height: 150,
+                      width: 400,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        gradient: const LinearGradient(
+                          colors: [
+                            Color.fromARGB(130, 112, 114, 235),
+                            Color.fromARGB(123, 155, 39, 176),
+                            Color.fromARGB(127, 155, 39, 176),
+                          ],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                        ),
+                        //color: const Color.fromARGB(85, 99, 101, 241),
                       ),
-                      //color: const Color.fromARGB(85, 99, 101, 241),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      //row containing 2 columns
-                      child: Row(
-                        children: [
-                          //1st column contains all 3 texts
-                          //and listview of small circles of members
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text(
-                                "Real Estate App Design",
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.black),
-                              ),
-                              const Text(
-                                "Team Members",
-                                style: TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              //listview for small member circles
-                              SizedBox(
-                                height: 20,
-                                width: 100,
-                                child: ListView.builder(
-                                  scrollDirection: Axis.horizontal,
-                                  itemCount: 5,
-                                  itemBuilder: (context, index) {
-                                    return Row(
-                                      children: [
-                                        Container(
-                                          height: 20,
-                                          width: 20,
-                                          decoration: const BoxDecoration(
-                                              color: Color(0xFF1E3A8A),
-                                              shape: BoxShape.circle),
-                                        ),
-                                      ],
-                                    );
-                                  },
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        //row containing 2 columns
+                        child: Row(
+                          children: [
+                            //1st column contains all 3 texts
+                            //and listview of small circles of members
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  "Real Estate App Design",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.black),
                                 ),
-                              ),
-                              const Spacer(),
-                              const Text(
-                                "Due on: 21 March",
-                                style: TextStyle(
-                                    fontSize: 17,
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.black),
-                              ),
-                            ],
-                          ),
-                          const Spacer(),
-                          //2nd column containing the progress bar/container
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              // CircularProgressIndicator(
-                              //   value: 1,
-                              //   color: Colors.white,
-                              //   semanticsLabel: "50",
-                              //   semanticsValue: ,
-                              // )
-
-                              Container(
-                                alignment: Alignment.center,
-                                height: 70,
-                                width: 70,
-                                decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.white,
-                                ),
-                                child: const Text(
-                                  "Progress",
+                                const Text(
+                                  "Team Members",
                                   style: TextStyle(
                                       fontSize: 15,
-                                      fontWeight: FontWeight.w500),
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black),
                                 ),
-                              ),
-                            ],
-                          )
-                        ],
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                //listview for small member circles
+                                SizedBox(
+                                  height: 20,
+                                  width: 100,
+                                  child: ListView.builder(
+                                    scrollDirection: Axis.horizontal,
+                                    itemCount: 5,
+                                    itemBuilder: (context, index) {
+                                      return Row(
+                                        children: [
+                                          Container(
+                                            height: 20,
+                                            width: 20,
+                                            decoration: const BoxDecoration(
+                                                color: Color(0xFF1E3A8A),
+                                                shape: BoxShape.circle),
+                                          ),
+                                        ],
+                                      );
+                                    },
+                                  ),
+                                ),
+                                const Spacer(),
+                                const Text(
+                                  "Due on: 21 March",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black),
+                                ),
+                              ],
+                            ),
+                            const Spacer(),
+                            //2nd column containing the progress bar/container
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                // CircularProgressIndicator(
+                                //   value: 1,
+                                //   color: Colors.white,
+                                //   semanticsLabel: "50",
+                                //   semanticsValue: ,
+                                // )
+
+                                Container(
+                                  alignment: Alignment.center,
+                                  height: 70,
+                                  width: 70,
+                                  decoration: const BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.white,
+                                  ),
+                                  child: const Text(
+                                    "Progress",
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w500),
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),
